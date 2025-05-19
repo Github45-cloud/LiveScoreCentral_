@@ -1,0 +1,59 @@
+#admin-header {
+    background-color: #111; 
+    color: #fff;
+    padding: 10px 0;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.admin-nav {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.admin-nav li a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.admin-nav li a:hover {
+    background-color: #004d80; /* Dark blue on hover */
+}
+
+.admin-nav li form input {
+    background: #e63946; /* Bold red for logout */
+    color: #fff;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-nav li form input[type="submit"]:hover {
+    background: rgb(99, 22, 22);
+}
+
+.admin-nav li form input[type="submit"]:active {
+    background: #9e2424;
+}

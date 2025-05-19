@@ -1,0 +1,97 @@
+/* Header styles */
+#header {
+    background-color: #0f0f0f; /* Even darker for richer look */
+    color: #d9b800; 
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.1); 
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.logo img {
+    height: 55px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-nav {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.main-nav li a {
+    color: #FFD700; /* Gold text */
+    font-size: 18px;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.main-nav li a:hover {
+    background-color: #222; /* Slight dark highlight on hover */
+    transform: scale(1.05);
+}
+
+.main-nav li form input {
+    background: #e63946; /* Bold red for logout */
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.main-nav li form input[type="submit"]:hover {
+    background: #c72c2c;
+    transform: scale(1.05);
+}
+
+.main-nav li form input[type="submit"]:active {
+    background: #9e2424;
+}
+
+/* Optional small touch to align better on large screens */
+@media (min-width: 768px) {
+    .header {
+        padding: 0 50px;
+    }
+}
+
+/* Login Button */
+.main-nav li form input[type="submit"] {
+    background-color: #e7ba0a; /* Yellowish-orange color */
+    color: #1e1e1e; /* Dark text for readability */
+    border: none;
+    padding: 8px 18px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.main-nav li form input[type="submit"]:hover {
+    background-color: #e0a800; /* Darker yellow-orange on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 10px;
+}
+

@@ -1,0 +1,42 @@
+.admin-dashboard {
+    padding: 40px;
+    background-color: #1b1d24;
+    color: #fff;
+    min-height: 90vh;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.admin-action-card {
+    background: #2c2f36;
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.admin-action-card h2 {
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #ffaa00;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff8800;
+}

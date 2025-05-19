@@ -1,0 +1,83 @@
+.live-matches-section {
+    padding: 20px;
+    background-color: #161616;
+    color: #fff;
+}
+
+h2 {
+    text-align: center;
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+.matches-container {
+    display: flex;
+    flex-direction: column;  /* Display each match in a new row */
+    gap: 20px;
+    align-items: center;
+}
+
+.match-card {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 8px;
+    width: 80%;  /* Adjust width to fit one match per row */
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fff;
+}
+
+.match-card h3 {
+    margin: 0 0 10px 0;
+    color: #FFD700;
+}
+
+.teams {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.score {
+    font-size: 22px;
+    color: #FFD700;
+}
+
+.match-time {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.location {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.location strong {
+    color: #FFD700;
+}
+
+.back-button-container {
+    margin-top: 40px;
+    text-align: center
+}
+
+.back-button {
+    background-color: #FFD700;
+    color: #1e1e1e;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #cc9a00;
+    transform: scale(1.05);
+}

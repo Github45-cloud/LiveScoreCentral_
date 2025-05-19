@@ -1,0 +1,15 @@
+.admin-footer {
+    background-color: #161616;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+.admin-footer .footer-content {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.admin-footer .footer-content p {
+    margin: 0;
+}

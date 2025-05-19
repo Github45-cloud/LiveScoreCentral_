@@ -1,0 +1,98 @@
+.create-match-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1b1d24;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    color: #f0f0f0;
+}
+
+.create-match-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.create-match-form label {
+    font-weight: bold;
+}
+
+.create-match-form input[type="text"],
+.create-match-form input[type="number"],
+.create-match-form input[type="datetime-local"] {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background-color: #2a2d36;
+    color: #fff;
+}
+
+.create-match-form .btn-submit {
+    background-color: #ff9900;
+    color: #000;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.create-match-form .btn-submit:hover {
+    background-color: #e68a00;
+}
+
+body {
+    background-color: #232323; 
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.back-button {
+    margin: 20px 40px;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #ff8800; /* Orange-yellowish */
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #e07000; 
+}
+
+.popup {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+}
+
+.error-message {
+    color: #D9534F; /* Red error message */
+    background: #F2DEDE; /* Light red background */
+    border: 1px solid #F5C6CB;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.success-message {
+    color: #28A745; /* Green success message */
+    background: #DFF0D8; /* Light green background */
+    border: 1px solid #C3E6CB;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: centerrgb(230, 177, 19)    
+}
+

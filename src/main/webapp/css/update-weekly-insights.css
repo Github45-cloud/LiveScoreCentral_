@@ -1,0 +1,90 @@
+.update-insights-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #1b1d24;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+body {
+    background-color: #232323; 
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #f4b400;
+}
+
+.insight-section {
+    background-color: #2a2d36;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.update-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.update-form label {
+    font-weight: bold;
+}
+
+.update-form input[type="text"],
+.update-form input[type="number"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3a3d46;
+    color: #fff;
+}
+
+.btn-submit {
+    background-color: #f4b400;
+    color: #000;
+    border: none;
+    padding: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #e6a800;
+}
+
+.ranking-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.back-button {
+    margin: 20px 0;
+}
+
+.back-button a {
+    color: #f4b400;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.back-button a:hover {
+    color: #e6a800;
+}
