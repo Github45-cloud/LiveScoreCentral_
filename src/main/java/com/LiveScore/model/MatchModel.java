@@ -36,4 +36,8 @@ public class MatchModel {
 
     public String getStadium() { return stadium; }
     public void setStadium(String stadium) { this.stadium = stadium; }
+    
+   
+
 }
+

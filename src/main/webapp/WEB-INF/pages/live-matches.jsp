@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.LiveScore.model.MatchModel" %>
 <%
@@ -10,6 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Live Matches - LiveScore</title>
+    <meta http-equiv="refresh" content="60" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/header.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/footer.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/live-matches.css" />
@@ -31,11 +33,35 @@
                                 <span class="team">${match.homeTeam}</span>
                                 <span class="score">${match.homeScore} - ${match.awayScore}</span>
                                 <span class="team">${match.awayTeam}</span>
+                                <c:choose>
+                                  <c:when test="${not empty match.kickoff}">
+                                    <%
+                                      java.sql.Timestamp kickoff = (java.sql.Timestamp) pageContext.findAttribute("match").getClass()
+                                          .getMethod("getKickoff").invoke(pageContext.findAttribute("match"));
+                                      long kickoffMillis = kickoff != null ? kickoff.getTime() : 0L;
+                                      long nowMillis = System.currentTimeMillis();
+                                      long minutesElapsed = (nowMillis - kickoffMillis) / 60000;
+
+                                      String displayText;
+                                      if (minutesElapsed < 0) {
+                                          displayText = "(Not started)";
+                                      } else if (minutesElapsed >= 90) {
+                                          displayText = "(90'+) Full Time";
+                                      } else {
+                                          displayText = "(" + minutesElapsed + "')";
+                                      }
+                                    %>
+                                    <span class="live-time" data-kickoff="<%= kickoffMillis %>"><%= displayText %></span>
+                                  </c:when>
+                                  <c:otherwise>
+                                    <span class="live-time">(Kickoff N/A)</span>
+                                  </c:otherwise>
+                                </c:choose>
                             </div>
                             <div class="match-time">
                                 <c:choose>
                                     <c:when test="${not empty match.kickoff}">
-                                        ${match.kickoff}
+                                        <fmt:formatDate value="${match.kickoff}" pattern="h:mm a, MMM dd" />
                                     </c:when>
                                     <c:otherwise>
                                         Kickoff time not available
@@ -62,5 +88,6 @@
 </div>
 
 <jsp:include page="footer.jsp" />
+
 </body>
 </html>

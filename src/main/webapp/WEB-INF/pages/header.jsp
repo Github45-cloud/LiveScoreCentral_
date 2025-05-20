@@ -6,6 +6,8 @@
     HttpSession userSession = request.getSession(false);
     UserModel currentUser = (userSession != null) ? 
         (UserModel) userSession.getAttribute("user") : null;
+%>
+<%
     String contextPath = request.getContextPath();
 %>
 
@@ -20,12 +22,12 @@
     <div id="header">
         <header class="header">
             <h1 class="logo">
-                <a href="<%= contextPath %>">
-                    <img src="${pageContext.request.contextPath}/resources/images/random.png" alt="LiveScore Logo" />
+    <a href="<%= contextPath %>">
+        <img src="<%= contextPath %>/random.png" alt="LiveScore Logo" />
+    </a>
+</h1>
 
 
-                </a>
-            </h1>
             <nav>
                 <ul class="main-nav">
                     <li><a href="<%= contextPath %>/home">Home</a></li>
